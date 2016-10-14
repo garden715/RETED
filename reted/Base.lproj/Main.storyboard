@@ -63,6 +63,9 @@
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didRequestPasswordReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50z-Ct-b8a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1r-18-V34">
                                 <frame key="frameInset" minX="134" minY="490" width="107" height="30"/>
@@ -71,6 +74,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cBW-PO-smX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-Vk-HAj">
                                 <frame key="frameInset" minX="97" minY="414" width="181" height="30"/>
@@ -79,21 +85,26 @@
                                 <state key="normal" title="SIGN IN TO GET STARTED">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qsg-zC-eCZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <segue destination="fpe-sz-fjn" kind="show" id="nlK-M3-PmN"/>
+                        <outlet property="emailField" destination="6I4-Yq-rWx" id="QbM-Vn-3UA"/>
+                        <outlet property="passwordField" destination="ire-12-Cqb" id="VSc-30-NuQ"/>
+                        <segue destination="fpe-sz-fjn" kind="show" identifier="SignInToFP" id="nlK-M3-PmN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Speechs View Controller-->
         <scene sceneID="eed-9B-Ovu">
             <objects>
-                <viewController id="fpe-sz-fjn" sceneMemberID="viewController">
+                <viewController id="fpe-sz-fjn" customClass="SpeechsViewController" customModule="reted" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dSU-b3-LFh"/>
                         <viewControllerLayoutGuide type="bottom" id="0OZ-KU-oOz"/>
@@ -106,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcs-9y-r8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="100"/>
+            <point key="canvasLocation" x="913" y="39"/>
         </scene>
     </scenes>
 </document>

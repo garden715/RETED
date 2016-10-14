@@ -17,6 +17,10 @@
 		EB33BC1E1DAB245200360AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB33BC1C1DAB245200360AE1 /* LaunchScreen.storyboard */; };
 		EB33BC291DAB245200360AE1 /* retedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC281DAB245200360AE1 /* retedTests.swift */; };
 		EB33BC341DAB245300360AE1 /* retedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC331DAB245300360AE1 /* retedUITests.swift */; };
+		EB6B03811DB0D926003D8239 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037E1DB0D926003D8239 /* AppState.swift */; };
+		EB6B03821DB0D926003D8239 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037F1DB0D926003D8239 /* Constants.swift */; };
+		EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */; };
+		EB6B03851DB0E03D003D8239 /* SpeechsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B03841DB0E03D003D8239 /* SpeechsViewController.swift */; };
 		EBF41AA41DAD33D30035AE7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,10 @@
 		EB33BC2F1DAB245300360AE1 /* retedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = retedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB33BC331DAB245300360AE1 /* retedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = retedUITests.swift; sourceTree = "<group>"; };
 		EB33BC351DAB245300360AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6B037E1DB0D926003D8239 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EB6B037F1DB0D926003D8239 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
+		EB6B03841DB0E03D003D8239 /* SpeechsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechsViewController.swift; sourceTree = "<group>"; };
 		EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				EB33BC151DAB245200360AE1 /* ViewController.swift */,
+				EB6B03841DB0E03D003D8239 /* SpeechsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,6 +185,9 @@
 		EB6B037C1DB0D86A003D8239 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB6B037E1DB0D926003D8239 /* AppState.swift */,
+				EB6B037F1DB0D926003D8239 /* Constants.swift */,
+				EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */,
 				EB33BC131DAB245200360AE1 /* AppDelegate.swift */,
 				EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */,
 				EB33BC1F1DAB245200360AE1 /* Info.plist */,
@@ -460,8 +472,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6B03851DB0E03D003D8239 /* SpeechsViewController.swift in Sources */,
+				EB6B03811DB0D926003D8239 /* AppState.swift in Sources */,
+				EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */,
 				EB33BC161DAB245200360AE1 /* ViewController.swift in Sources */,
 				EB33BC141DAB245200360AE1 /* AppDelegate.swift in Sources */,
+				EB6B03821DB0D926003D8239 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
