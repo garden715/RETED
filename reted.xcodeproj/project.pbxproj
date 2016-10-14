@@ -139,13 +139,10 @@
 		EB33BC121DAB245200360AE1 /* reted */ = {
 			isa = PBXGroup;
 			children = (
-				EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */,
-				EB33BC131DAB245200360AE1 /* AppDelegate.swift */,
-				EB33BC151DAB245200360AE1 /* ViewController.swift */,
-				EB33BC171DAB245200360AE1 /* Main.storyboard */,
 				EB33BC1A1DAB245200360AE1 /* Assets.xcassets */,
-				EB33BC1C1DAB245200360AE1 /* LaunchScreen.storyboard */,
-				EB33BC1F1DAB245200360AE1 /* Info.plist */,
+				EB6B037D1DB0D884003D8239 /* View */,
+				EB6B037C1DB0D86A003D8239 /* Supporting Files */,
+				EB6B037B1DB0D85B003D8239 /* Controller */,
 			);
 			path = reted;
 			sourceTree = "<group>";
@@ -166,6 +163,33 @@
 				EB33BC351DAB245300360AE1 /* Info.plist */,
 			);
 			path = retedUITests;
+			sourceTree = "<group>";
+		};
+		EB6B037B1DB0D85B003D8239 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB33BC151DAB245200360AE1 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EB6B037C1DB0D86A003D8239 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB33BC131DAB245200360AE1 /* AppDelegate.swift */,
+				EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */,
+				EB33BC1F1DAB245200360AE1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB6B037D1DB0D884003D8239 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB33BC171DAB245200360AE1 /* Main.storyboard */,
+				EB33BC1C1DAB245200360AE1 /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
