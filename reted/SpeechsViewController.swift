@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SpeechsViewController: UIViewController {
 
@@ -21,6 +22,18 @@ class SpeechsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signOut(_ sender: UIButton) {
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+            AppState.sharedInstance.signedIn = false
+            super.viewWillDisappear(true)
+//            dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            self.alertMessage(_message: "Error signing out: \(signOutError.localizedDescription)")
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -31,5 +44,13 @@ class SpeechsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    func alertMessage(_message:String) {
+        
+        let alert = UIAlertController(title: "Alert", message: _message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 
 }

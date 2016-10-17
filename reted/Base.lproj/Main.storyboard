@@ -95,7 +95,7 @@
                     <connections>
                         <outlet property="emailField" destination="6I4-Yq-rWx" id="QbM-Vn-3UA"/>
                         <outlet property="passwordField" destination="ire-12-Cqb" id="VSc-30-NuQ"/>
-                        <segue destination="fpe-sz-fjn" kind="show" identifier="SignInToFP" id="nlK-M3-PmN"/>
+                        <segue destination="Y16-AT-fIl" kind="show" identifier="SignInToFP" id="nlK-M3-PmN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,10 +114,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PM0-5i-w7d">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Jqy-Y4-YxU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rrv-9D-akO">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <connections>
+                                <action selector="signOut:" destination="fpe-sz-fjn" id="sni-Js-LQU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcs-9y-r8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="39"/>
+            <point key="canvasLocation" x="1868" y="114.69265367316342"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="96a-cd-dpb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y16-AT-fIl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A7F-iG-i49">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fpe-sz-fjn" kind="relationship" relationship="rootViewController" id="996-VQ-F7E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpK-c1-W8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="114.69265367316342"/>
         </scene>
     </scenes>
 </document>
