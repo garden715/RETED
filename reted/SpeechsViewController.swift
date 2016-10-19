@@ -9,12 +9,19 @@
 import UIKit
 import Firebase
 
-class SpeechsViewController: UIViewController {
+class SpeechsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navigation: UINavigationItem!
+    var ref: FIRDatabaseReference!
+    
+    fileprivate var _refHandle: FIRDatabaseHandle!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configureDatabase()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,18 +29,29 @@ class SpeechsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func configureDatabase() {
+        ref = FIRDatabase.database().reference()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return cell
+    }
+    
     @IBAction func signOut(_ sender: UIButton) {
         let firebaseAuth = FIRAuth.auth()
         do {
             try firebaseAuth?.signOut()
             AppState.sharedInstance.signedIn = false
-            super.viewWillDisappear(true)
-//            dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
         } catch let signOutError as NSError {
-            self.alertMessage(_message: "Error signing out: \(signOutError.localizedDescription)")
+            print ("Error signing out: \(signOutError.localizedDescription)")
         }
     }
-    
 
     /*
     // MARK: - Navigation
