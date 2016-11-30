@@ -26,7 +26,4 @@ class MeasurementHelper: NSObject {
     FIRAnalytics.logEvent(withName: "logout", parameters: nil)
   }
 
-  static func sendMessageEvent() {
-    FIRAnalytics.logEvent(withName: "message", parameters: nil)
-  }
 }

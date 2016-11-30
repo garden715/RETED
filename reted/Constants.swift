@@ -25,9 +25,9 @@ struct Constants {
     static let FpToSignIn = "FPToSignIn"
   }
 
-  struct MessageFields {
+  struct VideoFields {
     static let name = "name"
-    static let text = "text"
+    static let title = "title"
     static let photoURL = "photoURL"
     static let imageURL = "imageURL"
   }

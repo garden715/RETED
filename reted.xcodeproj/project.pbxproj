@@ -17,11 +17,14 @@
 		EB33BC1E1DAB245200360AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB33BC1C1DAB245200360AE1 /* LaunchScreen.storyboard */; };
 		EB33BC291DAB245200360AE1 /* retedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC281DAB245200360AE1 /* retedTests.swift */; };
 		EB33BC341DAB245300360AE1 /* retedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC331DAB245300360AE1 /* retedUITests.swift */; };
+		EB5935D01DEEF51000EF627F /* SpeechTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */; };
 		EB6B03811DB0D926003D8239 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037E1DB0D926003D8239 /* AppState.swift */; };
 		EB6B03821DB0D926003D8239 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037F1DB0D926003D8239 /* Constants.swift */; };
 		EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */; };
-		EB6B03851DB0E03D003D8239 /* SpeechsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B03841DB0E03D003D8239 /* SpeechsViewController.swift */; };
-		EBF41AA41DAD33D30035AE7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */; };
+		EB7A66101DED5C1E007063F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */; };
+		EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A66111DEDBFC1007063F1 /* Speech.swift */; };
+		EBC1C9F51DEF2A0800D9987F /* SpeechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */; };
+		EBC1C9F71DEF2F4C00D9987F /* SpeechTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +67,14 @@
 		EB33BC2F1DAB245300360AE1 /* retedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = retedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB33BC331DAB245300360AE1 /* retedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = retedUITests.swift; sourceTree = "<group>"; };
 		EB33BC351DAB245300360AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechTableViewController.swift; sourceTree = "<group>"; };
 		EB6B037E1DB0D926003D8239 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		EB6B037F1DB0D926003D8239 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
-		EB6B03841DB0E03D003D8239 /* SpeechsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechsViewController.swift; sourceTree = "<group>"; };
-		EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB7A66111DEDBFC1007063F1 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechTableViewCell.swift; sourceTree = "<group>"; };
+		EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				EB33BC151DAB245200360AE1 /* ViewController.swift */,
-				EB6B03841DB0E03D003D8239 /* SpeechsViewController.swift */,
+				EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -186,10 +192,12 @@
 			isa = PBXGroup;
 			children = (
 				EB6B037E1DB0D926003D8239 /* AppState.swift */,
+				EB7A66111DEDBFC1007063F1 /* Speech.swift */,
 				EB6B037F1DB0D926003D8239 /* Constants.swift */,
 				EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */,
 				EB33BC131DAB245200360AE1 /* AppDelegate.swift */,
-				EBF41AA31DAD33D30035AE7A /* GoogleService-Info.plist */,
+				EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */,
+				EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */,
 				EB33BC1F1DAB245200360AE1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -200,6 +208,7 @@
 			children = (
 				EB33BC171DAB245200360AE1 /* Main.storyboard */,
 				EB33BC1C1DAB245200360AE1 /* LaunchScreen.storyboard */,
+				EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 				TargetAttributes = {
 					EB33BC0F1DAB245200360AE1 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = S9GHSK5M7V;
 						ProvisioningStyle = Automatic;
 					};
 					EB33BC231DAB245200360AE1 = {
@@ -321,8 +331,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC1C9F71DEF2F4C00D9987F /* SpeechTableViewCell.xib in Resources */,
 				EB33BC1E1DAB245200360AE1 /* LaunchScreen.storyboard in Resources */,
-				EBF41AA41DAD33D30035AE7A /* GoogleService-Info.plist in Resources */,
+				EB7A66101DED5C1E007063F1 /* GoogleService-Info.plist in Resources */,
 				EB33BC1B1DAB245200360AE1 /* Assets.xcassets in Resources */,
 				EB33BC191DAB245200360AE1 /* Main.storyboard in Resources */,
 			);
@@ -472,12 +483,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB6B03851DB0E03D003D8239 /* SpeechsViewController.swift in Sources */,
+				EB5935D01DEEF51000EF627F /* SpeechTableViewController.swift in Sources */,
 				EB6B03811DB0D926003D8239 /* AppState.swift in Sources */,
 				EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */,
+				EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */,
 				EB33BC161DAB245200360AE1 /* ViewController.swift in Sources */,
 				EB33BC141DAB245200360AE1 /* AppDelegate.swift in Sources */,
 				EB6B03821DB0D926003D8239 /* Constants.swift in Sources */,
+				EBC1C9F51DEF2A0800D9987F /* SpeechTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +563,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -600,6 +614,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -630,7 +645,7 @@
 			baseConfigurationReference = 50D5D4B99CE861320401CECE /* Pods-reted.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S9GHSK5M7V;
 				INFOPLIST_FILE = reted/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reted;
@@ -644,7 +659,7 @@
 			baseConfigurationReference = 15C633992B48889B6A381CE3 /* Pods-reted.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S9GHSK5M7V;
 				INFOPLIST_FILE = reted/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reted;
