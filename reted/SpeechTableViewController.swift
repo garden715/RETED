@@ -11,52 +11,54 @@ import Firebase
 
 private let SpeechTableViewCellIdentifier = "Speech Cell"
 
-class SpeechTableViewController: UITableViewController {
+class SpeechTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var navigation: UINavigationItem!
-    var videos: [FIRDataSnapshot]! = []
-    var speeches:[Speech]! = []
-    var ref: FIRDatabaseReference!
     @IBOutlet weak var clientTable: UITableView!
+    
+    var videos: [FIRDataSnapshot]! = []
+    var speeches : [Speech]! = []
+    var ref: FIRDatabaseReference!
+
     fileprivate var _refHandle: FIRDatabaseHandle!
     
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.clientTable.register(UINib(nibName: "SpeechTableViewCell", bundle: nil), forCellReuseIdentifier: SpeechTableViewCellIdentifier)
+        
+        configureDatabase()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-//        self.clientTable.register(SpeechTableViewCell.self, forCellReuseIdentifier: SpeechTableViewCellIdentifier)
-        self.clientTable.register(UINib(nibName: "SpeechTableViewCell", bundle: nil), forCellReuseIdentifier: SpeechTableViewCellIdentifier)
-        
-        configureDatabase()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.ref.child("speech").removeObserver(withHandle: _refHandle)
+    } 
+    
     func configureDatabase() {
         ref = FIRDatabase.database().reference()
-        // Listen for new messages in the Firebase database
-        //        let userID = "16"
-        _refHandle = ref.child("speech").observe(FIRDataEventType.value, with: { (snapshot) in
-            
-            // [START_EXCLUDE]
+        
+        _refHandle = self.ref.child("speech").observe(FIRDataEventType.value, with: { [weak self] (snapshot) -> Void in
+            guard let strongSelf = self else { return }
             let videosEnumerator = snapshot.children
             while let video = videosEnumerator.nextObject() as? FIRDataSnapshot {
-                self.videos.append(video)
                 if let p = video.value as? Dictionary<String, AnyObject> {
                     let s = Speech()
                     s.setValuesForKeys(p);
-                    self.speeches.append(s)
+                    strongSelf.videos.append(video)
+                    strongSelf.speeches.append(s)
+                    strongSelf.clientTable.insertRows(at: [IndexPath(row: strongSelf.videos.count-1, section: 0)], with: .automatic)
                 }
             }
-            self.clientTable.reloadData()
-            // [END_EXCLUDE]
         })
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,26 +68,22 @@ class SpeechTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.videos.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.clientTable.dequeueReusableCell(withIdentifier: SpeechTableViewCellIdentifier, for: indexPath) as! SpeechTableViewCell
         
         // Unpack message from Firebase DataSnapshot
-//        let videoSnapshot: FIRDataSnapshot! = self.videos[indexPath.row]
-//        let video = videoSnapshot.value as! Dictionary<String, String>
-//        let name = video[Constants.VideoFields.name] as String!
-//        let text = video[Constants.VideoFields.title] as String!
-        
+
         let speech : Speech! = self.speeches[indexPath.row]
         let name = speech.name as String!
         let title = speech.title as String!
@@ -100,7 +98,7 @@ class SpeechTableViewController: UITableViewController {
     }
     
 
-    @IBAction func signOut(_ sender: UIButton) {
+    @IBAction func signOut(_ sender: UIBarButtonItem) {
         let firebaseAuth = FIRAuth.auth()
         do {
             try firebaseAuth?.signOut()

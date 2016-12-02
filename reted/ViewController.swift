@@ -15,9 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
 
     override func viewDidAppear(_ animated: Bool) {
-//        if let user = FIRAuth.auth()?.currentUser {
-            //self.signedIn(user)
-//        }
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        if let user = FIRAuth.auth()?.currentUser {
+            self.signedIn(user)
+        }
     }
     
     @IBAction func didTapSignIn(_ sender: AnyObject) {

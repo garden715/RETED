@@ -9,7 +9,7 @@
 import UIKit
 
 class Speech: NSObject {
-
+    
     var name : String
     var duration: String
     var embed: String

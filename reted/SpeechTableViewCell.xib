@@ -12,38 +12,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Speech Cell" rowHeight="101" id="JIH-Cn-cgs" customClass="SpeechTableViewCell" customModule="reted" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Speech Cell" rowHeight="69" id="JIH-Cn-cgs" customClass="SpeechTableViewCell" customModule="reted" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JIH-Cn-cgs" id="Tun-ex-htk">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-wc-tgm">
-                        <rect key="frame" x="116" y="11" width="251" height="30"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0C-Pe-O3c">
-                        <rect key="frame" x="116" y="61" width="251" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="116" y="14.5" width="251" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgm-q7-Mbt">
-                        <rect key="frame" x="8" y="1" width="100" height="100"/>
+                        <rect key="frame" x="8" y="0.0" width="100" height="69.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="l2q-a6-TmD"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0C-Pe-O3c">
+                        <rect key="frame" x="116" y="37.5" width="251" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="E0C-Pe-O3c" secondAttribute="trailing" id="1VH-be-dGk"/>
-                    <constraint firstItem="LS2-wc-tgm" firstAttribute="centerY" secondItem="Tun-ex-htk" secondAttribute="centerY" constant="-25" id="5Jz-0L-y0l"/>
+                    <constraint firstItem="LS2-wc-tgm" firstAttribute="centerY" secondItem="Tun-ex-htk" secondAttribute="centerY" constant="-10" id="5Jz-0L-y0l"/>
                     <constraint firstAttribute="bottom" secondItem="dgm-q7-Mbt" secondAttribute="bottom" id="CvV-Fn-UMe"/>
                     <constraint firstAttribute="leadingMargin" secondItem="dgm-q7-Mbt" secondAttribute="leading" id="E6u-7L-C8V"/>
-                    <constraint firstItem="E0C-Pe-O3c" firstAttribute="centerY" secondItem="Tun-ex-htk" secondAttribute="centerY" constant="20.5" id="Hk6-cX-fwH"/>
+                    <constraint firstItem="E0C-Pe-O3c" firstAttribute="centerY" secondItem="Tun-ex-htk" secondAttribute="centerY" constant="10" id="Hk6-cX-fwH"/>
                     <constraint firstItem="E0C-Pe-O3c" firstAttribute="leading" secondItem="dgm-q7-Mbt" secondAttribute="trailing" constant="8" id="ZpU-wS-Umj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="LS2-wc-tgm" secondAttribute="trailing" id="ecl-sn-61q"/>
                     <constraint firstItem="dgm-q7-Mbt" firstAttribute="centerY" secondItem="Tun-ex-htk" secondAttribute="centerY" id="hKe-OA-3pE"/>
@@ -55,7 +55,7 @@
                 <outlet property="thumbnail" destination="dgm-q7-Mbt" id="TSN-Iy-qoB"/>
                 <outlet property="titleLabel" destination="LS2-wc-tgm" id="0av-Yb-W6C"/>
             </connections>
-            <point key="canvasLocation" x="174.5" y="55"/>
+            <point key="canvasLocation" x="174.5" y="39"/>
         </tableViewCell>
     </objects>
 </document>
