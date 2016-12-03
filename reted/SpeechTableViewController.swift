@@ -12,6 +12,7 @@ import Firebase
 private let SpeechTableViewCellIdentifier = "Speech Cell"
 
 class SpeechTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var levelController: UISegmentedControl!
     
     @IBOutlet weak var navigation: UINavigationItem!
     @IBOutlet weak var clientTable: UITableView!
@@ -22,14 +23,14 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     fileprivate var _refHandle: FIRDatabaseHandle!
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.clientTable.register(UINib(nibName: "SpeechTableViewCell", bundle: nil), forCellReuseIdentifier: SpeechTableViewCellIdentifier)
         
         configureDatabase()
+
+        navigationController?.navigationBar.setBottomBorderColor(color: .red, height: 3.0)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -129,5 +130,15 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
+    }
+}
+
+extension UINavigationBar {
+    
+    func setBottomBorderColor(color: UIColor, height: CGFloat) {
+        let bottomBorderRect = CGRect(x: 0, y: frame.height, width: frame.width, height: height)
+        let bottomBorderView = UIView(frame: bottomBorderRect)
+        bottomBorderView.backgroundColor = color
+        addSubview(bottomBorderView)
     }
 }

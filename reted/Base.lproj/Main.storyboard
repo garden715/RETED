@@ -194,21 +194,25 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RETED" id="rri-J0-pnu">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="Qe0-an-3Vl">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="Qe0-an-3Vl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="signOut:" destination="Ojt-qK-tKz" id="VcY-Ex-zl6"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="ZJK-hx-UPQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="clientTable" destination="Yib-zJ-8MO" id="xkb-rB-ECd"/>
+                        <outlet property="levelController" destination="Hw0-Y0-Iqj" id="jVK-RM-VKI"/>
                         <outlet property="navigation" destination="rri-J0-pnu" id="ood-P5-qdL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf4-cj-5Z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="103"/>
+            <point key="canvasLocation" x="1840.5797101449277" y="102.71739130434783"/>
         </scene>
         <!--Speech Detail View Controller-->
         <scene sceneID="r1y-1k-fqK">
@@ -260,7 +264,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C2F-dP-a2T" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="FsB-eL-gdd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" shadowImage="shadow" id="FsB-eL-gdd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,4 +284,7 @@
             <point key="canvasLocation" x="1055" y="103"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shadow" width="1" height="2"/>
+    </resources>
 </document>
