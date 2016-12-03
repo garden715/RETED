@@ -180,6 +180,9 @@
                                     <segment title="Advanced"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="selectedSegmentedController:" destination="Ojt-qK-tKz" eventType="valueChanged" id="BsZ-nr-F2H"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

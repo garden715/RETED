@@ -12,16 +12,29 @@ import Firebase
 private let SpeechTableViewCellIdentifier = "Speech Cell"
 
 class SpeechTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var levelController: UISegmentedControl!
     
+    @IBOutlet weak var levelController: UISegmentedControl!
     @IBOutlet weak var navigation: UINavigationItem!
     @IBOutlet weak var clientTable: UITableView!
     
     var videos: [FIRDataSnapshot]! = []
     var speeches : [Speech]! = []
+    var filteredSpeeches : [Speech]! = []
     var ref: FIRDatabaseReference!
 
     fileprivate var _refHandle: FIRDatabaseHandle!
+    
+    @IBAction func selectedSegmentedController(_ sender: Any) {
+        self.filteredSpeeches.removeAll()
+        
+        for speech : Speech in speeches {
+            let grageOfSpeech = speech.grade - 1
+            if levelController.selectedSegmentIndex == grageOfSpeech {
+                filteredSpeeches.append(speech)
+            }
+        }
+        self.clientTable.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +62,7 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
                     insertedSpeech.setValuesForKeys(videoDict);
                     strongSelf.videos.append(video)
                     strongSelf.speeches.append(insertedSpeech)
+                    strongSelf.filteredSpeeches.append(insertedSpeech)
                     strongSelf.clientTable.insertRows(at: [IndexPath(row: strongSelf.videos.count-1, section: 0)], with: .automatic)
                 }
             }
@@ -78,7 +92,7 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         // Unpack message from Firebase DataSnapshot
 
-        let speech : Speech! = self.speeches[indexPath.row]
+        let speech : Speech! = self.filteredSpeeches[indexPath.row]
         let name = speech.name as String!
         let title = speech.title as String!
         
