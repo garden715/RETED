@@ -23,6 +23,7 @@
 		EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */; };
 		EB7A66101DED5C1E007063F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */; };
 		EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A66111DEDBFC1007063F1 /* Speech.swift */; };
+		EBB58A301DF1DB010041162B /* SpeechDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB58A2F1DF1DB010041162B /* SpeechDetailViewController.swift */; };
 		EBC1C9F51DEF2A0800D9987F /* SpeechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */; };
 		EBC1C9F71DEF2F4C00D9987F /* SpeechTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
 		EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB7A66111DEDBFC1007063F1 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		EBB58A2F1DF1DB010041162B /* SpeechDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechDetailViewController.swift; sourceTree = "<group>"; };
 		EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechTableViewCell.swift; sourceTree = "<group>"; };
 		EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +186,7 @@
 			children = (
 				EB33BC151DAB245200360AE1 /* ViewController.swift */,
 				EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */,
+				EBB58A2F1DF1DB010041162B /* SpeechDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */,
 				EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */,
 				EB33BC161DAB245200360AE1 /* ViewController.swift in Sources */,
+				EBB58A301DF1DB010041162B /* SpeechDetailViewController.swift in Sources */,
 				EB33BC141DAB245200360AE1 /* AppDelegate.swift in Sources */,
 				EB6B03821DB0D926003D8239 /* Constants.swift in Sources */,
 				EBC1C9F51DEF2A0800D9987F /* SpeechTableViewCell.swift in Sources */,

@@ -161,6 +161,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Rfk-oy-V8k" kind="show" identifier="Show Detail" id="tEZ-Pw-BhP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -204,25 +207,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf4-cj-5Z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1842.0289855072465" y="112.50000000000001"/>
+            <point key="canvasLocation" x="1841" y="103"/>
         </scene>
-        <!--View Controller-->
+        <!--Speech Detail View Controller-->
         <scene sceneID="r1y-1k-fqK">
             <objects>
-                <viewController id="Rfk-oy-V8k" sceneMemberID="viewController">
+                <viewController id="Rfk-oy-V8k" customClass="SpeechDetailViewController" customModule="reted" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9JD-NV-G5w"/>
                         <viewControllerLayoutGuide type="bottom" id="igt-YG-MiT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oDY-si-Zo5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wh-a7-9uA">
+                                <rect key="frame" x="0.0" y="8" width="414" height="360"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="7QT-G8-VRT"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7wh-a7-9uA" secondAttribute="trailing" constant="-20" id="IT8-Gj-s6Q"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7wh-a7-9uA" secondAttribute="leading" constant="20" id="SUs-TR-YFM"/>
+                            <constraint firstItem="7wh-a7-9uA" firstAttribute="top" secondItem="9JD-NV-G5w" secondAttribute="bottom" constant="8" symbolic="YES" id="y4T-Qo-3Zd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="7wh-a7-9uA" id="r8e-jT-JQZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cf-mF-tzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2719" y="189"/>
+            <point key="canvasLocation" x="2589.8550724637685" y="102.71739130434783"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z5z-L2-EKV">
