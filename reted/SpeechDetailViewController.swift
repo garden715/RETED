@@ -8,19 +8,36 @@
 
 import UIKit
 
-class SpeechDetailViewController: UIViewController {
+class SpeechDetailViewController: UIViewController, UIWebViewDelegate {
+    
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var pageDetailActivityIndicator: UIActivityIndicatorView!
     var speech : Speech!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webView.loadHTMLString(speech.embed, baseURL: nil)
-        
-        webView.scrollView.isScrollEnabled = false
-        webView.sizeToFit()
+        loadWebView()
+        loadSpeechDetail()
     }
 
+    func loadWebView() {
+        self.webView.loadHTMLString(speech.embed, baseURL: nil)
+        self.webView.scrollView.isScrollEnabled = false
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        if self.webView.isLoading {
+            return;
+        }
+        
+        self.pageDetailActivityIndicator.stopAnimating()
+    }
+    
+    func loadSpeechDetail() {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -222,21 +223,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wh-a7-9uA">
-                                <rect key="frame" x="0.0" y="8" width="414" height="360"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="276"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="7QT-G8-VRT"/>
+                                    <constraint firstAttribute="width" secondItem="7wh-a7-9uA" secondAttribute="height" multiplier="1.5:1" id="k8H-Kp-OWh"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="Rfk-oy-V8k" id="RbT-eN-dCm"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gLH-ip-RaV">
+                                <rect key="frame" x="197" y="128" width="20" height="20"/>
+                                <color key="color" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="7wh-a7-9uA" secondAttribute="trailing" constant="-20" id="IT8-Gj-s6Q"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="7wh-a7-9uA" secondAttribute="leading" constant="20" id="SUs-TR-YFM"/>
-                            <constraint firstItem="7wh-a7-9uA" firstAttribute="top" secondItem="9JD-NV-G5w" secondAttribute="bottom" constant="8" symbolic="YES" id="y4T-Qo-3Zd"/>
+                            <constraint firstItem="7wh-a7-9uA" firstAttribute="leading" secondItem="oDY-si-Zo5" secondAttribute="leading" id="85R-7Y-9u1"/>
+                            <constraint firstAttribute="trailing" secondItem="7wh-a7-9uA" secondAttribute="trailing" id="CVm-0u-zfq"/>
+                            <constraint firstItem="gLH-ip-RaV" firstAttribute="centerY" secondItem="7wh-a7-9uA" secondAttribute="centerY" id="QgP-Zd-mWB"/>
+                            <constraint firstItem="7wh-a7-9uA" firstAttribute="top" secondItem="9JD-NV-G5w" secondAttribute="bottom" id="hfr-hR-XqL"/>
+                            <constraint firstItem="gLH-ip-RaV" firstAttribute="centerX" secondItem="7wh-a7-9uA" secondAttribute="centerX" id="w9F-cx-utO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pageDetailActivityIndicator" destination="gLH-ip-RaV" id="uyV-ie-LXd"/>
                         <outlet property="webView" destination="7wh-a7-9uA" id="r8e-jT-JQZ"/>
                     </connections>
                 </viewController>
@@ -249,11 +260,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C2F-dP-a2T" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="FsB-eL-gdd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="FsB-eL-gdd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
