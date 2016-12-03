@@ -184,56 +184,12 @@
                                     <action selector="selectedSegmentedController:" destination="Ojt-qK-tKz" eventType="valueChanged" id="BsZ-nr-F2H"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VN1-A7-MGg">
-                                <rect key="frame" x="0.0" y="412" width="414" height="260"/>
-                                <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KG-IW-CpP">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="216"/>
-                                        <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="216" id="5Kg-dm-wM1"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dataSource" destination="Ojt-qK-tKz" id="cia-bf-yeG"/>
-                                            <outlet property="delegate" destination="Ojt-qK-tKz" id="tmt-us-v88"/>
-                                        </connections>
-                                    </pickerView>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-Xq-GSb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="ycP-hx-VFP"/>
-                                        </constraints>
-                                        <items>
-                                            <barButtonItem systemItem="done" id="E1f-51-USQ">
-                                                <connections>
-                                                    <action selector="didTappedPickerDone:" destination="Ojt-qK-tKz" id="0gB-aH-EjO"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </items>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    </toolbar>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="1KG-IW-CpP" firstAttribute="centerX" secondItem="VN1-A7-MGg" secondAttribute="centerX" id="2Y8-BV-Cv6"/>
-                                    <constraint firstItem="1KG-IW-CpP" firstAttribute="top" secondItem="g5a-Xq-GSb" secondAttribute="bottom" id="Eks-WQ-WCn"/>
-                                    <constraint firstItem="1KG-IW-CpP" firstAttribute="width" secondItem="VN1-A7-MGg" secondAttribute="width" id="RkJ-Us-mjL"/>
-                                    <constraint firstAttribute="height" constant="260" id="buv-Jh-vnH"/>
-                                    <constraint firstItem="g5a-Xq-GSb" firstAttribute="width" secondItem="VN1-A7-MGg" secondAttribute="width" id="mUJ-EB-e4a"/>
-                                    <constraint firstItem="g5a-Xq-GSb" firstAttribute="top" secondItem="VN1-A7-MGg" secondAttribute="top" id="oRu-8c-P9Z"/>
-                                    <constraint firstItem="g5a-Xq-GSb" firstAttribute="centerX" secondItem="VN1-A7-MGg" secondAttribute="centerX" id="rer-Ht-tWq"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Hw0-Y0-Iqj" secondAttribute="trailing" id="3Am-7B-QGE"/>
-                            <constraint firstItem="VN1-A7-MGg" firstAttribute="leading" secondItem="Vin-Yn-VPd" secondAttribute="leadingMargin" constant="-20" id="AB2-6x-oHv"/>
                             <constraint firstItem="Hw0-Y0-Iqj" firstAttribute="leading" secondItem="Vin-Yn-VPd" secondAttribute="leadingMargin" id="FN5-jx-WLr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VN1-A7-MGg" secondAttribute="trailing" constant="-20" id="P7h-qI-uuI"/>
                             <constraint firstItem="Hw0-Y0-Iqj" firstAttribute="top" secondItem="5gz-w0-mej" secondAttribute="bottom" constant="8" symbolic="YES" id="QIV-nU-PHP"/>
-                            <constraint firstItem="VN1-A7-MGg" firstAttribute="bottom" secondItem="hXT-9g-Fat" secondAttribute="top" id="VhU-vj-Tts"/>
                             <constraint firstItem="Yib-zJ-8MO" firstAttribute="leading" secondItem="Vin-Yn-VPd" secondAttribute="leading" id="YFA-Fm-LhN"/>
                             <constraint firstItem="Hw0-Y0-Iqj" firstAttribute="centerX" secondItem="Yib-zJ-8MO" secondAttribute="centerX" id="fnj-vY-iS1"/>
                             <constraint firstItem="Yib-zJ-8MO" firstAttribute="bottom" secondItem="hXT-9g-Fat" secondAttribute="top" id="oN4-Lf-KEo"/>
@@ -257,9 +213,6 @@
                     <connections>
                         <outlet property="clientTable" destination="Yib-zJ-8MO" id="xkb-rB-ECd"/>
                         <outlet property="levelController" destination="Hw0-Y0-Iqj" id="jVK-RM-VKI"/>
-                        <outlet property="navigation" destination="rri-J0-pnu" id="ood-P5-qdL"/>
-                        <outlet property="pickerView" destination="VN1-A7-MGg" id="lCB-IX-mov"/>
-                        <outlet property="ratePicker" destination="1KG-IW-CpP" id="65k-8g-8IB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf4-cj-5Z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -316,7 +269,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C2F-dP-a2T" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" shadowImage="shadow" id="FsB-eL-gdd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" shadowImage="shadow" id="FsB-eL-gdd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

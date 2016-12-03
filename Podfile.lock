@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
   - Firebase/AdMob (3.10.0):
     - Firebase/Core
     - Google-Mobile-Ads-SDK (= 7.15.0)
@@ -71,6 +72,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.7)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - Firebase/AdMob
   - Firebase/Auth
   - Firebase/Core
@@ -80,6 +82,7 @@ DEPENDENCIES:
   - Firebase/Storage
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Firebase: 387f37c7dca894a02708da9ff35ba147040eae9e
   FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
   FirebaseAuth: 96e9674ff31d6e1f826d53e26aa003a57cab0295
@@ -95,6 +98,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
 
-PODFILE CHECKSUM: 2e3770e29dec5ab1bce55a6f5c17d954e1017fec
+PODFILE CHECKSUM: 9cefaf710d4b7c91fc177f9ff4f7189025803ef9
 
 COCOAPODS: 1.0.0

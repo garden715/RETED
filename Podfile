@@ -11,6 +11,7 @@ target 'reted' do
   pod 'Firebase/Crash'
   pod 'Firebase/Database'
   pod 'Firebase/RemoteConfig'
+  pod 'ActionSheetPicker-3.0'
   # Pods for reted
 
   target 'retedTests' do

@@ -8,51 +8,57 @@
 
 import UIKit
 import Firebase
+import ActionSheetPicker_3_0
 
 private let SpeechTableViewCellIdentifier = "Speech Cell"
 
-class SpeechTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class SpeechTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var pickerView: UIView!
     @IBOutlet weak var levelController: UISegmentedControl!
-    @IBOutlet weak var navigation: UINavigationItem!
     @IBOutlet weak var clientTable: UITableView!
-    @IBOutlet weak var ratePicker: UIPickerView!
     
     var videos: [FIRDataSnapshot]! = []
     var speeches : [Speech]! = []
     var filteredSpeeches : [Speech]! = []
     var ref: FIRDatabaseReference!
-    
+    var acp : ActionSheetStringPicker!
     var pickerData: [String] = [String]()
-    
+    var selectedRate = 0
     fileprivate var _refHandle: FIRDatabaseHandle!
     
     
     override func viewDidLoad() {
-        configurePickerView()
+        
+        self.clientTable.register(UINib(nibName: "SpeechTableViewCell", bundle: nil), forCellReuseIdentifier: SpeechTableViewCellIdentifier)
+        self.navigationController?.navigationBar.setBottomBorderColor(color: .red, height: 3.0)
         
         super.viewDidLoad()
-        pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
-        self.clientTable.register(UINib(nibName: "SpeechTableViewCell", bundle: nil), forCellReuseIdentifier: SpeechTableViewCellIdentifier)
         
         configureDatabase()
-        
-        
-        self.navigationController?.navigationBar.setBottomBorderColor(color: .red, height: 3.0)
+        configureActionSheetStringPicker()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.ref.child("speech").removeObserver(withHandle: _refHandle)
     }
     
-    func configurePickerView() {
-        print(self.pickerView.layer.position.y)
-        self.pickerView.layer.position.y = self.view.bounds.maxY + 130
-        print(self.pickerView.layer.position.y)
-        self.pickerView.isHidden = false
-        self.didTappedFilter(self)
-        print(self.pickerView.layer.position.y)
+    
+    func configureActionSheetStringPicker() {
+        pickerData = ["All", "Fascinating", "Informative", "Funny", "Persuasive","Courageous", "Ingenious", "Inspiring", "Beautiful"]
+        
+        acp = ActionSheetStringPicker.init(title: "", rows: pickerData, initialSelection: selectedRate, doneBlock: {
+            picker, index, value in
+            self.selectedRate = index
+            self.selectedSegmentedController(self)
+            return
+            
+        }, cancel: {
+            ActionStringCancelBlock in return
+            
+        }, origin: self.view)
+        
+        acp?.toolbarBackgroundColor = UIColor.lightGray
+        acp?.toolbarButtonsColor = UIColor.white
     }
     
     func configureDatabase() {
@@ -67,10 +73,9 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
                     insertedSpeech.setValuesForKeys(videoDict);
                     strongSelf.videos.append(video)
                     strongSelf.speeches.append(insertedSpeech)
-                    strongSelf.filteredSpeeches.append(insertedSpeech)
-                    strongSelf.clientTable.insertRows(at: [IndexPath(row: strongSelf.videos.count-1, section: 0)], with: .automatic)
                 }
             }
+            strongSelf.selectedSegmentedController(strongSelf)
         })
     }
     
@@ -82,39 +87,21 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func selectedSegmentedController(_ sender: Any) {
         self.filteredSpeeches.removeAll()
         
-        for speech : Speech in speeches {
+        for speech : Speech in self.speeches {
             let grageOfSpeech = speech.grade - 1
-            if levelController.selectedSegmentIndex == grageOfSpeech {
-                filteredSpeeches.append(speech)
+            if (levelController.selectedSegmentIndex == grageOfSpeech) &&
+                ((self.selectedRate == 0) ||
+                    (pickerData.index(of: speech.rated1) ?? 0 == self.selectedRate) ||
+                    (pickerData.index(of: speech.rated2) ?? 0 == self.selectedRate)) {
+                
+                self.filteredSpeeches.append(speech)
             }
         }
         self.clientTable.reloadData()
     }
     
-    @IBAction func didTappedPickerDone(_ sender: Any) {
-        self.didTappedFilter(sender)
-        
-    }
     @IBAction func didTappedFilter(_ sender: Any) {
-        if self.pickerView.isHidden {
-            
-            self.pickerView.isHidden = false
-            UIView.animate(withDuration: 0.3, animations: {
-                self.pickerView.center.y = self.view.bounds.maxY - 130
-                print(self.view.bounds.maxY + 130)
-                print(self.pickerView.layer.position.y)
-            })
-            
-        } else {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.pickerView.center.y = self.view.bounds.maxY + 130
-                print(self.view.bounds.maxY + 130)
-                print(self.pickerView.layer.position.y)
-            }, completion: {_ in
-                self.pickerView.isHidden = true
-            })
-            
-        }
+        acp.show()
     }
     // MARK: - Table view data source
     
@@ -125,7 +112,7 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.videos.count
+        return self.filteredSpeeches.count
     }
     
     
@@ -188,23 +175,6 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
-        
-    }
 }
 
 extension UINavigationBar {
