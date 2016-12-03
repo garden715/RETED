@@ -81,13 +81,24 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
         let name = speech.name as String!
         let title = speech.title as String!
         
-        cell.titleLabel?.text = title
-        cell.nameLabel?.text = name
-        cell.thumbnail?.image = UIImage(named: "ic_account_circle")
-        let photoURL = speech.img
-        let url = URL(string: photoURL)
-        let data = try? Data(contentsOf: url!)
-        cell.thumbnail?.image = UIImage(data: data!)
+        cell.activitytIndicator.startAnimating()
+        cell.titleLabel.text = title
+        cell.nameLabel.text = name
+        cell.thumbnail.image = UIImage(named: "ic_account_circle")
+        
+        DispatchQueue.global(qos: .background).async {
+            let photoURL = speech.img
+            let url = URL(string: photoURL)
+            let data = try? Data(contentsOf: url!)
+            
+            DispatchQueue.main.async {
+                if data != nil {
+                    cell.thumbnail.image = UIImage(data: data!)
+                    cell.activitytIndicator.stopAnimating()
+                }
+            }
+        }
+        
         return cell
     }
     
