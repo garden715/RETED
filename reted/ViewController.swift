@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
 
     override func viewDidAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
@@ -23,23 +24,29 @@ class ViewController: UIViewController {
     
     @IBAction func didTapSignIn(_ sender: AnyObject) {
         // Sign In with credentials.
+        self.loginActivityIndicator.startAnimating()
         guard let email = emailField.text, let password = passwordField.text else {
             return }
         FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 self.alertMessage(_message: error.localizedDescription)
+                self.loginActivityIndicator.stopAnimating()
                 return
             }
+            self.loginActivityIndicator.stopAnimating()
             self.signedIn(user!)
         }
     }
     @IBAction func didTapSignUp(_ sender: AnyObject) {
+        self.loginActivityIndicator.startAnimating()
         guard let email = emailField.text, let password = passwordField.text else { return }
         FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 self.alertMessage(_message: error.localizedDescription)
+                self.loginActivityIndicator.stopAnimating()
                 return
             }
+            self.loginActivityIndicator.stopAnimating()
             self.setDisplayName(user!)
         }
     }
@@ -70,8 +77,12 @@ class ViewController: UIViewController {
                 }
             }
         }
+        let cancelAction = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
+        
         prompt.addTextField(configurationHandler: nil)
         prompt.addAction(okAction)
+        prompt.addAction(cancelAction)
+        
         present(prompt, animated: true, completion: nil);
     }
     
@@ -83,11 +94,13 @@ class ViewController: UIViewController {
         let notificationName = Notification.Name(rawValue: Constants.NotificationKeys.SignedIn)
         NotificationCenter.default.post(name: notificationName, object: nil, userInfo: nil)
         performSegue(withIdentifier: Constants.Segues.SignInToFp, sender: nil)
+        self.emailField.text?.removeAll()
+        self.passwordField.text?.removeAll()
     }
     
     func alertMessage(_message:String) {
         
-        let alert = UIAlertController(title: "Alert", message: _message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Caution", message: _message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
 
