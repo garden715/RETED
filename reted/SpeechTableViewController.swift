@@ -24,8 +24,6 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
     var acp : ActionSheetStringPicker!
     var pickerData: [String] = [String]()
     var selectedRate = 0
-    fileprivate var _refHandle: FIRDatabaseHandle!
-    
     
     override func viewDidLoad() {
         
@@ -37,11 +35,6 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
         configureDatabase()
         configureActionSheetStringPicker()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.ref.child("speech").removeObserver(withHandle: _refHandle)
-    }
-    
     
     func configureActionSheetStringPicker() {
         pickerData = ["All", "Fascinating", "Informative", "Funny", "Persuasive","Courageous", "Ingenious", "Inspiring", "Beautiful"]
@@ -64,7 +57,7 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
     func configureDatabase() {
         ref = FIRDatabase.database().reference()
         
-        _refHandle = self.ref.child("speech").observe(FIRDataEventType.value, with: { [weak self] (snapshot) -> Void in
+        self.ref.child("speech").observeSingleEvent(of: FIRDataEventType.value, with: { [weak self] (snapshot) -> Void in
             guard let strongSelf = self else { return }
             let videosEnumerator = snapshot.children
             while let video = videosEnumerator.nextObject() as? FIRDataSnapshot {
@@ -76,6 +69,8 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
                 }
             }
             strongSelf.selectedSegmentedController(strongSelf)
+            }, withCancel: { error -> Void in
+                print(error.localizedDescription)
         })
     }
     
@@ -147,7 +142,7 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Constants.Segues.FpToDetail, sender: speeches[indexPath.row])
+        performSegue(withIdentifier: Constants.Segues.FpToDetail, sender: filteredSpeeches[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
