@@ -50,6 +50,10 @@ class ViewController: UIViewController {
             self.setDisplayName(user!)
         }
     }
+
+    @IBAction func userTappedBackground(sender: AnyObject) {
+        view.endEditing(true)
+    }
     
     func setDisplayName(_ user: FIRUser) {
         let changeRequest = user.profileChangeRequest()
@@ -107,4 +111,3 @@ class ViewController: UIViewController {
     }
 
 }
-
