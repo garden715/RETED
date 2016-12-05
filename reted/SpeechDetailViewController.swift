@@ -11,7 +11,7 @@ import GoogleMobileAds
 import Firebase
 
 //let kBannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
-let kBannerAdUnitID = "ca-app-pub-9901818943715840~5138514416"
+let kBannerAdUnitID = "ca-app-pub-9901818943715840/8091980811"
 
 class SpeechDetailViewController: UIViewController, UIWebViewDelegate {
     

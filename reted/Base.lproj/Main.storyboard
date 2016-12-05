@@ -336,10 +336,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-8L-zRM" customClass="GADBannerView">
-                                <rect key="frame" x="20" y="627" width="374" height="45"/>
+                                <rect key="frame" x="20" y="627" width="374" height="60"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="tQC-TW-NWP"/>
+                                    <constraint firstAttribute="height" constant="60" id="tQC-TW-NWP"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autoloadEnabled" value="YES"/>
@@ -358,7 +358,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="RdA-8L-zRM" secondAttribute="trailing" id="gbU-DR-1FK"/>
                             <constraint firstItem="7wh-a7-9uA" firstAttribute="top" secondItem="9JD-NV-G5w" secondAttribute="bottom" id="hfr-hR-XqL"/>
                             <constraint firstItem="gLH-ip-RaV" firstAttribute="centerX" secondItem="7wh-a7-9uA" secondAttribute="centerX" id="w9F-cx-utO"/>
-                            <constraint firstItem="igt-YG-MiT" firstAttribute="top" secondItem="RdA-8L-zRM" secondAttribute="bottom" id="xP4-PK-75v"/>
+                            <constraint firstItem="igt-YG-MiT" firstAttribute="top" secondItem="RdA-8L-zRM" secondAttribute="bottom" constant="-15" id="xP4-PK-75v"/>
                             <constraint firstItem="RdA-8L-zRM" firstAttribute="leading" secondItem="oDY-si-Zo5" secondAttribute="leadingMargin" id="zWE-Un-3M4"/>
                         </constraints>
                     </view>
