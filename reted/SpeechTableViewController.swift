@@ -17,7 +17,6 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var levelController: UISegmentedControl!
     @IBOutlet weak var clientTable: UITableView!
     
-    var videos: [FIRDataSnapshot]! = []
     var speeches : [Speech]! = []
     var filteredSpeeches : [Speech]! = []
     var ref: FIRDatabaseReference!
@@ -64,7 +63,6 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
                 if let videoDict = video.value as? Dictionary<String, AnyObject> {
                     let insertedSpeech = Speech()
                     insertedSpeech.setValuesForKeys(videoDict);
-                    strongSelf.videos.append(video)
                     strongSelf.speeches.append(insertedSpeech)
                 }
             }
@@ -123,7 +121,6 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
         cell.activitytIndicator.startAnimating()
         cell.titleLabel.text = title
         cell.nameLabel.text = name
-        cell.thumbnail.image = UIImage(named: "ic_account_circle")
         
         DispatchQueue.global(qos: .background).async {
             let photoURL = speech.img
@@ -164,8 +161,8 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func alertMessage(_message:String) {
-        let alert = UIAlertController(title: "Alert", message: _message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: NSLocalizedString("ALERT", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), message: _message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("CONFIRM", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
     }
@@ -181,3 +178,5 @@ extension UINavigationBar {
         addSubview(bottomBorderView)
     }
 }
+
+

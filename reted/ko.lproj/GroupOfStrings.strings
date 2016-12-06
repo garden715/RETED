@@ -1,0 +1,18 @@
+/* 
+  GroupOfStrings.strings
+  reted
+
+  Created by seojungwon on 2016. 12. 6..
+  Copyright © 2016년 seojungwon. All rights reserved.
+*/
+
+"ALERT_COPY_HAS_DONE" = "클립보드에 복사되었습니다!";
+"SUBJECT_OF_MAIL" = "[RETED] 지원요청 및 제안";
+"OK" = "확인";
+"DURATION" = "재생시간";
+"FILMED" = "게시일";
+"RATE" = "항목";
+"ALERT" = "경고";
+"CONFIRM" = "확인";
+"CANCEL" = "취소";
+"CAUTION" = "경고";

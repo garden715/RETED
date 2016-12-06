@@ -10,7 +10,6 @@ import UIKit
 import GoogleMobileAds
 import Firebase
 
-//let kBannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
 let kBannerAdUnitID = "ca-app-pub-9901818943715840/8091980811"
 
 class SpeechDetailViewController: UIViewController, UIWebViewDelegate {
@@ -53,9 +52,9 @@ class SpeechDetailViewController: UIViewController, UIWebViewDelegate {
     func loadSpeechDetail() {
         self.nameLabel.text = "\(speech.name):"
         self.titleLabel.text = "\(speech.title)"
-        self.durationLabel.text = "Duration : \(speech.duration)"
-        self.dateLabel.text = "Filmed : \(speech.releaseDate)"
-        self.rateLabel.text = "Rate : \(speech.rated1), \(speech.rated2)"
+        self.durationLabel.text = "\(NSLocalizedString("DURATION", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: "")) : \(speech.duration)"
+        self.dateLabel.text = "\(NSLocalizedString("FILMED", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: "")) : \(speech.releaseDate)"
+        self.rateLabel.text = "\(NSLocalizedString("RATE", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: "")) : \(speech.rated1), \(speech.rated2)"
     }
     
     func loadAd() {
@@ -72,19 +71,9 @@ class SpeechDetailViewController: UIViewController, UIWebViewDelegate {
     @IBAction func didTappedCopyButton(_ sender: Any) {
         UIPasteboard.general.string = self.speech.embed
         
-        let alertController = UIAlertController(title: "", message: "The link is copied to pasteboard!", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        let alertController = UIAlertController(title: "", message: NSLocalizedString("ALERT_COPY_HAS_DONE", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), style: UIAlertActionStyle.default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

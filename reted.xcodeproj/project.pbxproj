@@ -21,11 +21,13 @@
 		EB6B03811DB0D926003D8239 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037E1DB0D926003D8239 /* AppState.swift */; };
 		EB6B03821DB0D926003D8239 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037F1DB0D926003D8239 /* Constants.swift */; };
 		EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */; };
-		EB7A66101DED5C1E007063F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */; };
 		EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A66111DEDBFC1007063F1 /* Speech.swift */; };
+		EB8A391C1DF5C134002DEFEA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A391B1DF5C134002DEFEA /* SettingTableViewController.swift */; };
+		EBA4322B1DF69DB2004FFE6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBA4322A1DF69DB2004FFE6D /* GoogleService-Info.plist */; };
 		EBB58A301DF1DB010041162B /* SpeechDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB58A2F1DF1DB010041162B /* SpeechDetailViewController.swift */; };
 		EBC1C9F51DEF2A0800D9987F /* SpeechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */; };
 		EBC1C9F71DEF2F4C00D9987F /* SpeechTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */; };
+		EBE6CFC51DF6BC9800FCC268 /* GroupOfStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBE6CFC71DF6BC9800FCC268 /* GroupOfStrings.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,12 +74,17 @@
 		EB6B037E1DB0D926003D8239 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		EB6B037F1DB0D926003D8239 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
-		EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB7A66111DEDBFC1007063F1 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		EB8A391B1DF5C134002DEFEA /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		EB9275C41DF54AE800DD7A09 /* reted.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = reted.entitlements; sourceTree = "<group>"; };
+		EBA4322A1DF69DB2004FFE6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBB58A2F1DF1DB010041162B /* SpeechDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechDetailViewController.swift; sourceTree = "<group>"; };
 		EBB58A311DF2F8F60041162B /* ActionSheetPicker_3_0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionSheetPicker_3_0.framework; path = "Pods/../build/Debug-iphoneos/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework"; sourceTree = "<group>"; };
 		EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechTableViewCell.swift; sourceTree = "<group>"; };
 		EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechTableViewCell.xib; sourceTree = "<group>"; };
+		EBE6CFC21DF6B8C900FCC268 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		EBE6CFC61DF6BC9800FCC268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/GroupOfStrings.strings; sourceTree = "<group>"; };
+		EBE6CFCA1DF6BEE900FCC268 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/GroupOfStrings.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6B037D1DB0D884003D8239 /* View */,
+				EB8A39211DF67B26002DEFEA /* Model */,
 				EB6B037C1DB0D86A003D8239 /* Supporting Files */,
 				EB6B037B1DB0D85B003D8239 /* Controller */,
 			);
@@ -188,6 +196,7 @@
 				EB33BC151DAB245200360AE1 /* ViewController.swift */,
 				EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */,
 				EBB58A2F1DF1DB010041162B /* SpeechDetailViewController.swift */,
+				EB8A391B1DF5C134002DEFEA /* SettingTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,14 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				EB6B037E1DB0D926003D8239 /* AppState.swift */,
-				EB7A66111DEDBFC1007063F1 /* Speech.swift */,
-				EB6B037F1DB0D926003D8239 /* Constants.swift */,
-				EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */,
 				EB33BC131DAB245200360AE1 /* AppDelegate.swift */,
-				EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */,
-				EB7A660F1DED5C1E007063F1 /* GoogleService-Info.plist */,
 				EB33BC1F1DAB245200360AE1 /* Info.plist */,
+				EBA4322A1DF69DB2004FFE6D /* GoogleService-Info.plist */,
 				EB33BC1A1DAB245200360AE1 /* Assets.xcassets */,
+				EB9275C41DF54AE800DD7A09 /* reted.entitlements */,
+				EBE6CFC71DF6BC9800FCC268 /* GroupOfStrings.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -216,6 +223,17 @@
 				EBC1C9F61DEF2F4C00D9987F /* SpeechTableViewCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		EB8A39211DF67B26002DEFEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB7A66111DEDBFC1007063F1 /* Speech.swift */,
+				EB6B037F1DB0D926003D8239 /* Constants.swift */,
+				EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */,
+				EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,11 +313,11 @@
 				TargetAttributes = {
 					EB33BC0F1DAB245200360AE1 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S9GHSK5M7V;
+						DevelopmentTeam = 7KW522KWZF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -324,6 +342,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = EB33BC071DAB245200360AE1;
 			productRefGroup = EB33BC111DAB245200360AE1 /* Products */;
@@ -342,9 +361,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE6CFC51DF6BC9800FCC268 /* GroupOfStrings.strings in Resources */,
 				EBC1C9F71DEF2F4C00D9987F /* SpeechTableViewCell.xib in Resources */,
 				EB33BC1E1DAB245200360AE1 /* LaunchScreen.storyboard in Resources */,
-				EB7A66101DED5C1E007063F1 /* GoogleService-Info.plist in Resources */,
+				EBA4322B1DF69DB2004FFE6D /* GoogleService-Info.plist in Resources */,
 				EB33BC1B1DAB245200360AE1 /* Assets.xcassets in Resources */,
 				EB33BC191DAB245200360AE1 /* Main.storyboard in Resources */,
 			);
@@ -513,6 +533,7 @@
 				EB6B03811DB0D926003D8239 /* AppState.swift in Sources */,
 				EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */,
 				EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */,
+				EB8A391C1DF5C134002DEFEA /* SettingTableViewController.swift in Sources */,
 				EB33BC161DAB245200360AE1 /* ViewController.swift in Sources */,
 				EBB58A301DF1DB010041162B /* SpeechDetailViewController.swift in Sources */,
 				EB33BC141DAB245200360AE1 /* AppDelegate.swift in Sources */,
@@ -557,6 +578,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB33BC181DAB245200360AE1 /* Base */,
+				EBE6CFC21DF6B8C900FCC268 /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -569,6 +591,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		EBE6CFC71DF6BC9800FCC268 /* GroupOfStrings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE6CFC61DF6BC9800FCC268 /* Base */,
+				EBE6CFCA1DF6BEE900FCC268 /* ko */,
+			);
+			name = GroupOfStrings.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -576,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -627,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -673,11 +706,13 @@
 			baseConfigurationReference = 50D5D4B99CE861320401CECE /* Pods-reted.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S9GHSK5M7V;
+				CODE_SIGN_ENTITLEMENTS = reted/reted.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7KW522KWZF;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = reted/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reted;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jungwon.reted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -689,11 +724,13 @@
 			baseConfigurationReference = 15C633992B48889B6A381CE3 /* Pods-reted.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S9GHSK5M7V;
+				CODE_SIGN_ENTITLEMENTS = reted/reted.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7KW522KWZF;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = reted/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reted;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jungwon.reted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -706,6 +743,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = S9GHSK5M7V;
 				INFOPLIST_FILE = retedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -722,6 +760,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = S9GHSK5M7V;
 				INFOPLIST_FILE = retedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

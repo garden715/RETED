@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>798372672616-tfv0at95u8778togfusma8840bicmn3d.apps.googleusercontent.com</string>
+	<string>798372672616-h3na6eefcnj5g630hrito66m1795k0r2.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.798372672616-tfv0at95u8778togfusma8840bicmn3d</string>
+	<string>com.googleusercontent.apps.798372672616-h3na6eefcnj5g630hrito66m1795k0r2</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBm8PJgJgBiBwOP3xZ8-OunCCksfx5P0TE</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.reted</string>
+	<string>com.jungwon.reted</string>
 	<key>PROJECT_ID</key>
 	<string>reted-cffee</string>
 	<key>STORAGE_BUCKET</key>
@@ -27,13 +27,13 @@
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
 	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:798372672616:ios:a678db2b4b66a307</string>
+	<string>1:798372672616:ios:81091df88f36b11d</string>
 	<key>DATABASE_URL</key>
 	<string>https://reted-cffee.firebaseio.com</string>
 </dict>

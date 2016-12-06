@@ -68,8 +68,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didRequestPasswordReset(_ sender: AnyObject) {
-        let prompt = UIAlertController.init(title: nil, message: "Email:", preferredStyle: .alert)
-        let okAction = UIAlertAction.init(title: "OK", style: .default) { (action) in
+        let prompt = UIAlertController.init(title: nil, message: NSLocalizedString("EMAIL", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: NSLocalizedString("OK", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), style: .default) { (action) in
             let userInput = prompt.textFields![0].text
             if (userInput!.isEmpty) {
                 return
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        let cancelAction = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction.init(title: NSLocalizedString("CANCEL", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), style: .cancel, handler: nil)
         
         prompt.addTextField(configurationHandler: nil)
         prompt.addAction(okAction)
@@ -104,8 +104,8 @@ class ViewController: UIViewController {
     
     func alertMessage(_message:String) {
         
-        let alert = UIAlertController(title: "Caution", message: _message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: NSLocalizedString("CAUTION", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), message: _message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("CONFIRM", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
 
     }

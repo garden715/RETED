@@ -1,0 +1,18 @@
+/* 
+  GroupOfStrings.strings
+  reted
+
+  Created by seojungwon on 2016. 12. 6..
+  Copyright © 2016년 seojungwon. All rights reserved.
+*/
+
+"ALERT_COPY_HAS_DONE" = "The link is copied to pasteboard!";
+"SUBJECT_OF_MAIL" = "[RETED] Requires your support";
+"OK" = "OK";
+"DURATION" = "Duration";
+"FILMED" = "Filmed";
+"RATE" = "Rate";
+"ALERT" = "Alert";
+"CONFIRM" = "Confirm";
+"CANCEL" = "Cancel";
+"CAUTION" = "Caution";

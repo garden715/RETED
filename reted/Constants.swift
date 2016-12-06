@@ -24,11 +24,7 @@ struct Constants {
     static let SignInToFp = "SignInToFP"
     static let FpToSignIn = "FPToSignIn"
     static let FpToDetail = "Show Detail"
+    static let SettingToLicenses = "Show Licenses"
   }
 
-  struct VideoFields {
-    static let name = "name"
-    static let title = "title"
-    static let imageURL = "imageURL"
-  }
 }

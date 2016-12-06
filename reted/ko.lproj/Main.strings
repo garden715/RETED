@@ -1,0 +1,93 @@
+
+/* Class = "UILabel"; text = "Recommendation Of"; ObjectID = "2tL-l1-dRK"; */
+"2tL-l1-dRK.text" = "Recommendation Of";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "6I4-Yq-rWx"; */
+"6I4-Yq-rWx.placeholder" = "이메일";
+
+/* Class = "UILabel"; text = "TED"; ObjectID = "6QE-6W-ypq"; */
+"6QE-6W-ypq.text" = "TED";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password"; ObjectID = "CP2-4B-tSg"; */
+"CP2-4B-tSg.normalTitle" = "비밀번호 찾기";
+
+/* Class = "UILabel"; text = "Licenses"; ObjectID = "DyV-Vj-YxE"; */
+"DyV-Vj-YxE.text" = "라이센스";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "Eq9-Zi-A8N"; */
+"Eq9-Zi-A8N.text" = "게시일";
+
+/* Class = "UISegmentedControl"; Hw0-Y0-Iqj.segmentTitles[0] = "Novice"; ObjectID = "Hw0-Y0-Iqj"; */
+"Hw0-Y0-Iqj.segmentTitles[0]" = "초급";
+
+/* Class = "UISegmentedControl"; Hw0-Y0-Iqj.segmentTitles[1] = "Intermediate"; ObjectID = "Hw0-Y0-Iqj"; */
+"Hw0-Y0-Iqj.segmentTitles[1]" = "중급";
+
+/* Class = "UISegmentedControl"; Hw0-Y0-Iqj.segmentTitles[2] = "Advanced"; ObjectID = "Hw0-Y0-Iqj"; */
+"Hw0-Y0-Iqj.segmentTitles[2]" = "고급";
+
+/* Class = "UILabel"; text = "ver."; ObjectID = "LjA-aT-33o"; */
+"LjA-aT-33o.text" = "버전";
+
+/* Class = "UILabel"; text = "title"; ObjectID = "MKp-Qi-bHZ"; */
+"MKp-Qi-bHZ.text" = "제목";
+
+/* Class = "UIBarButtonItem"; title = "Sign Out"; ObjectID = "Qe0-an-3Vl"; */
+"Qe0-an-3Vl.title" = "로그아웃";
+
+/* Class = "UILabel"; text = "rate"; ObjectID = "Y34-Aa-KYG"; */
+"Y34-Aa-KYG.text" = "항목";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "YBb-A3-D0d"; */
+"YBb-A3-D0d.text" = "연설자";
+
+/* Class = "UIBarButtonItem"; title = "Filter"; ObjectID = "ZJK-hx-UPQ"; */
+"ZJK-hx-UPQ.title" = "필터";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "djD-kG-Qdn"; */
+"djD-kG-Qdn.footerTitle" = " ";
+
+/* Class = "UITableViewSection"; headerTitle = "Feedback"; ObjectID = "djD-kG-Qdn"; */
+"djD-kG-Qdn.headerTitle" = "피드백";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN TO GET STARTED"; ObjectID = "dyD-Vk-HAj"; */
+"dyD-Vk-HAj.normalTitle" = "로그인";
+
+/* Class = "UIViewController"; title = "Licenses"; ObjectID = "hDx-Wt-cJK"; */
+"hDx-Wt-cJK.title" = "라이센스";
+
+/* Class = "UIBarButtonItem"; title = "Setting"; ObjectID = "hre-vF-MMt"; */
+"hre-vF-MMt.title" = "설정";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "ire-12-Cqb"; */
+"ire-12-Cqb.placeholder" = "비밀번호";
+
+/* Class = "UINavigationItem"; title = "RETED"; ObjectID = "rri-J0-pnu"; */
+"rri-J0-pnu.title" = "RETED";
+
+/* Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "s45-8u-RuO"; */
+"s45-8u-RuO.headerTitle" = "이 앱에 관하여";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "s45-8u-RuO"; */
+"s45-8u-RuO.footerTitle" = " ";
+
+/* Class = "UILabel"; text = "TED"; ObjectID = "uAj-I6-xeA"; */
+"uAj-I6-xeA.text" = "TED";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "v1r-18-V34"; */
+"v1r-18-V34.normalTitle" = "계정 생성";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "vtj-BL-Hlt"; */
+"vtj-BL-Hlt.text" = " ";
+
+/* Class = "UILabel"; text = "duration"; ObjectID = "wel-z5-cyE"; */
+"wel-z5-cyE.text" = "재생시간";
+
+/* Class = "UILabel"; text = "RE"; ObjectID = "wpT-5z-Uye"; */
+"wpT-5z-Uye.text" = "RE";
+
+/* Class = "UILabel"; text = "copy"; ObjectID = "zBk-J2-7zP"; */
+"zBk-J2-7zP.text" = "링크 복사";
+
+/* Class = "UILabel"; text = "Bug Report / Suggest"; ObjectID = "zo5-BB-npI"; */
+"zo5-BB-npI.text" = "버그 신고 / 도움";
