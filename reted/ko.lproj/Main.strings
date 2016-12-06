@@ -87,7 +87,7 @@
 "wpT-5z-Uye.text" = "RE";
 
 /* Class = "UILabel"; text = "copy"; ObjectID = "zBk-J2-7zP"; */
-"zBk-J2-7zP.text" = "링크 복사";
+"zBk-J2-7zP.text" = "링크";
 
 /* Class = "UILabel"; text = "Bug Report / Suggest"; ObjectID = "zo5-BB-npI"; */
 "zo5-BB-npI.text" = "버그 신고 / 도움";
