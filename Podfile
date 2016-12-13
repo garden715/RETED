@@ -6,7 +6,6 @@ target 'reted' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
-  pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'ActionSheetPicker-3.0'
   # Pods for reted
