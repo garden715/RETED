@@ -11,16 +11,13 @@
 		B2183DBB4B0BC2A61F38F7CB /* Pods_reted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42A1AD2E622FBE232A0BE72 /* Pods_reted.framework */; };
 		D06E6764999952FB8CC54DB9 /* Pods_retedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3794506F0869F3BFAB069663 /* Pods_retedUITests.framework */; };
 		EB33BC141DAB245200360AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC131DAB245200360AE1 /* AppDelegate.swift */; };
-		EB33BC161DAB245200360AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC151DAB245200360AE1 /* ViewController.swift */; };
 		EB33BC191DAB245200360AE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB33BC171DAB245200360AE1 /* Main.storyboard */; };
 		EB33BC1B1DAB245200360AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB33BC1A1DAB245200360AE1 /* Assets.xcassets */; };
 		EB33BC1E1DAB245200360AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB33BC1C1DAB245200360AE1 /* LaunchScreen.storyboard */; };
 		EB33BC291DAB245200360AE1 /* retedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC281DAB245200360AE1 /* retedTests.swift */; };
 		EB33BC341DAB245300360AE1 /* retedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33BC331DAB245300360AE1 /* retedUITests.swift */; };
 		EB5935D01DEEF51000EF627F /* SpeechTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */; };
-		EB6B03811DB0D926003D8239 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037E1DB0D926003D8239 /* AppState.swift */; };
 		EB6B03821DB0D926003D8239 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B037F1DB0D926003D8239 /* Constants.swift */; };
-		EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */; };
 		EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A66111DEDBFC1007063F1 /* Speech.swift */; };
 		EB8A391C1DF5C134002DEFEA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A391B1DF5C134002DEFEA /* SettingTableViewController.swift */; };
 		EBA4322B1DF69DB2004FFE6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBA4322A1DF69DB2004FFE6D /* GoogleService-Info.plist */; };
@@ -59,7 +56,6 @@
 		E042E3C654A9FD8A23C26BC3 /* Pods-retedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-retedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-retedTests/Pods-retedTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB33BC101DAB245200360AE1 /* reted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB33BC131DAB245200360AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB33BC151DAB245200360AE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB33BC181DAB245200360AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB33BC1A1DAB245200360AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB33BC1D1DAB245200360AE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,9 +67,7 @@
 		EB33BC331DAB245300360AE1 /* retedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = retedUITests.swift; sourceTree = "<group>"; };
 		EB33BC351DAB245300360AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechTableViewController.swift; sourceTree = "<group>"; };
-		EB6B037E1DB0D926003D8239 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		EB6B037F1DB0D926003D8239 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
 		EB7A66111DEDBFC1007063F1 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
 		EB8A391B1DF5C134002DEFEA /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		EB9275C41DF54AE800DD7A09 /* reted.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = reted.entitlements; sourceTree = "<group>"; };
@@ -193,7 +187,6 @@
 		EB6B037B1DB0D85B003D8239 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EB33BC151DAB245200360AE1 /* ViewController.swift */,
 				EB5935CF1DEEF51000EF627F /* SpeechTableViewController.swift */,
 				EBB58A2F1DF1DB010041162B /* SpeechDetailViewController.swift */,
 				EB8A391B1DF5C134002DEFEA /* SettingTableViewController.swift */,
@@ -204,7 +197,6 @@
 		EB6B037C1DB0D86A003D8239 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB6B037E1DB0D926003D8239 /* AppState.swift */,
 				EB33BC131DAB245200360AE1 /* AppDelegate.swift */,
 				EB33BC1F1DAB245200360AE1 /* Info.plist */,
 				EBA4322A1DF69DB2004FFE6D /* GoogleService-Info.plist */,
@@ -230,7 +222,6 @@
 			children = (
 				EB7A66111DEDBFC1007063F1 /* Speech.swift */,
 				EB6B037F1DB0D926003D8239 /* Constants.swift */,
-				EB6B03801DB0D926003D8239 /* MeasurementHelper.swift */,
 				EBC1C9F41DEF2A0800D9987F /* SpeechTableViewCell.swift */,
 			);
 			name = Model;
@@ -530,11 +521,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5935D01DEEF51000EF627F /* SpeechTableViewController.swift in Sources */,
-				EB6B03811DB0D926003D8239 /* AppState.swift in Sources */,
-				EB6B03831DB0D926003D8239 /* MeasurementHelper.swift in Sources */,
 				EB7A66121DEDBFC1007063F1 /* Speech.swift in Sources */,
 				EB8A391C1DF5C134002DEFEA /* SettingTableViewController.swift in Sources */,
-				EB33BC161DAB245200360AE1 /* ViewController.swift in Sources */,
 				EBB58A301DF1DB010041162B /* SpeechDetailViewController.swift in Sources */,
 				EB33BC141DAB245200360AE1 /* AppDelegate.swift in Sources */,
 				EB6B03821DB0D926003D8239 /* Constants.swift in Sources */,

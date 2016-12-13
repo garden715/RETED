@@ -149,17 +149,6 @@ class SpeechTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    @IBAction func signOut(_ sender: UIBarButtonItem) {
-        let firebaseAuth = FIRAuth.auth()
-        do {
-            try firebaseAuth?.signOut()
-            AppState.sharedInstance.signedIn = false
-            dismiss(animated: true, completion: nil)
-        } catch let signOutError as NSError {
-            print ("Error signing out: \(signOutError.localizedDescription)")
-        }
-    }
-    
     func alertMessage(_message:String) {
         let alert = UIAlertController(title: NSLocalizedString("ALERT", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), message: _message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("CONFIRM", tableName: "GroupOfStrings", bundle: Bundle.main, value: "", comment: ""), style: UIAlertActionStyle.default, handler: nil))
